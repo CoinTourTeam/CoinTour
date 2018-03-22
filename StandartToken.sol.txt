@@ -1,3 +1,14 @@
+pragma solidity ^0.4.17;
+
+import "./ERC20.sol";
+import "./BasicToken.sol";
+
+/**
+ * @title Standard ERC20 token
+ * @dev Implementation of the basic standard token.
+ * @dev https://github.com/ethereum/EIPs/issues/20
+ * @dev Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol
+ */
 contract StandardToken is ERC20, BasicToken {
 
     mapping (address => mapping (address => uint256)) allowed;
@@ -39,9 +50,3 @@ contract StandardToken is ERC20, BasicToken {
         return allowed[_owner][_spender];
     }
 }
-
-/**
- * @title Mintable token
- * @dev Issue: * https://github.com/OpenZeppelin/zeppelin-solidity/issues/120
- * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol
- */

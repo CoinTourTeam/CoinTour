@@ -1,3 +1,11 @@
+pragma solidity ^0.4.17;
+
+import "./BurnableToken.sol";
+
+/**
+ * @title SimpleTokenCoin
+ * @dev SimpleToken is a standard ERC20 token with some additional functionality
+ */
 contract SimpleTokenCoin is BurnableToken {
     
     address public forBounty = 0xdd5Aea206449d610A9e0c45B6b3fdAc684e0c8bD;
@@ -64,8 +72,3 @@ contract SimpleTokenCoin is BurnableToken {
 }
 
 interface ApproveAndCallFallBack { function receiveApproval(address from, uint256 tokens, bytes data) external; }
-
-/**
- * @title Crowdsale 
- * @dev Based on references from OpenZeppelin: https://github.com/OpenZeppelin/zeppelin-solidity
- */

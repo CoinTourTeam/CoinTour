@@ -1,3 +1,12 @@
+pragma solidity ^0.4.17;
+
+import "./SimpleTokenCoin.sol";
+import "./SafeMath.sol";
+
+/**
+ * @title Crowdsale 
+ * @dev Based on references from OpenZeppelin: https://github.com/OpenZeppelin/zeppelin-solidity
+ */
 contract Crowdsale is SimpleTokenCoin {
     
     using SafeMath for uint;

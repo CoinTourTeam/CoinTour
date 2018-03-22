@@ -1,3 +1,13 @@
+pragma solidity ^0.4.17;
+
+import "./MintableToken.sol";
+import "./SafeMath.sol";
+
+
+/**
+ * @title Burnable Token
+ * @dev Token that can be irreversibly burned (destroyed).
+ */
 contract BurnableToken is MintableToken {
     
     using SafeMath for uint;
@@ -31,8 +41,3 @@ contract BurnableToken is MintableToken {
 
     event Burn(address indexed burner, uint indexed value);
 }
-
-/**
- * @title SimpleTokenCoin
- * @dev SimpleToken is a standard ERC20 token with some additional functionality
- */

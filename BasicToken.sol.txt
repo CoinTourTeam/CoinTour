@@ -1,3 +1,13 @@
+pragma solidity ^0.4.17;
+
+import "./ERC20Basic.sol";
+import "./SafeMath.sol";
+
+
+/**
+ * @title Basic token
+ * @dev Basic version of StandardToken, with no allowances. 
+ */
 contract BasicToken is ERC20Basic {
     
     using SafeMath for uint256;
@@ -59,10 +69,3 @@ contract BasicToken is ERC20Basic {
         return balances[_owner];
     }
 }
-
-/**
- * @title Standard ERC20 token
- * @dev Implementation of the basic standard token.
- * @dev https://github.com/ethereum/EIPs/issues/20
- * @dev Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol
- */

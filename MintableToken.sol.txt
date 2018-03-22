@@ -1,3 +1,12 @@
+pragma solidity ^0.4.17;
+
+import "./StandardToken.sol";
+
+/**
+ * @title Mintable token
+ * @dev Issue: * https://github.com/OpenZeppelin/zeppelin-solidity/issues/120
+ * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol
+ */
 contract MintableToken is StandardToken {
     
     event Mint(address indexed to, uint256 amount);
@@ -35,8 +44,3 @@ contract MintableToken is StandardToken {
         return true;
     }
 }
-
-/**
- * @title Burnable Token
- * @dev Token that can be irreversibly burned (destroyed).
- */
